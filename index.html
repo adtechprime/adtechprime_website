@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdTech Prime Solution — Coming Soon | Ad-Tech & Media Innovation</title>
+  <meta name="description"
+    content="AdTech Prime Solution — Pioneering Ad-Tech innovations, Ad-Media solutions, and next-gen service excellence. We're launching soon — stay connected." />
+  <meta name="theme-color" content="#1c2a35" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="AdTech Prime Solution — Coming Soon" />
+  <meta property="og:description"
+    content="Pioneering next-generation advertising technology, media solutions, and world-class service excellence." />
+  <meta property="og:image" content="logo.png" />
+
+  <!-- Favicon & Brand Icons (AP Initials) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <!-- Google Fonts — Inter + Sora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Animated particle canvas background -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient glow overlays -->
+  <div class="glow glow--blue" aria-hidden="true"></div>
+  <div class="glow glow--accent" aria-hidden="true"></div>
+  <div class="glow glow--soft" aria-hidden="true"></div>
+
+  <!-- Subtle grid texture -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Noise texture overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ─── Main Content Wrapper ─── -->
+  <div class="page-wrapper">
+
+    <!-- Top Bar / Header -->
+    <header class="top-bar" id="topBar">
+      <div class="logo" id="logo">
+        <img src="logo.png" alt="AdTech Prime Solution" class="logo__img" />
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero" id="heroSection">
+
+      <!-- Status Badge -->
+      <div class="hero__badge" id="heroBadge">
+        <span class="hero__badge-dot"></span>
+        <span class="hero__badge-text">Launching Soon</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="hero__title" id="heroTitle">
+        <span class="hero__title-line hero__title-line--1">The Future of</span>
+        <span class="hero__title-line hero__title-line--2">
+          <span class="gradient-text">Ad-Tech</span> Innovation
+        </span>
+        <span class="hero__title-line hero__title-line--3">is Almost Here</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero__subtitle" id="heroSubtitle">
+        Pioneering next-generation <strong>advertising technology</strong>,
+        cutting-edge <strong>media solutions</strong>, and
+        world-class <strong>service excellence</strong> — all under one roof.
+      </p>
+
+      <!-- Countdown Timer -->
+      <div class="countdown" id="countdown">
+        <div class="countdown__block" id="countdownDays">
+          <span class="countdown__number" data-unit="days">00</span>
+          <span class="countdown__label">Days</span>
+        </div>
+        <div class="countdown__separator" aria-hidden="true">:</div>
+        <div class="countdown__block" id="countdownHours">
+          <span class="countdown__number" data-unit="hours">00</span>
+          <span class="countdown__label">Hours</span>
+        </div>
+        <div class="countdown__separator" aria-hidden="true">:</div>
+        <div class="countdown__block" id="countdownMinutes">
+          <span class="countdown__number" data-unit="minutes">00</span>
+          <span class="countdown__label">Minutes</span>
+        </div>
+        <div class="countdown__separator" aria-hidden="true">:</div>
+        <div class="countdown__block" id="countdownSeconds">
+          <span class="countdown__number" data-unit="seconds">00</span>
+          <span class="countdown__label">Seconds</span>
+        </div>
+      </div>
+
+
+      <!-- Feature Pillars -->
+      <div class="pillars" id="pillars">
+        <div class="pillar" id="pillar1">
+          <div class="pillar__icon-wrap">
+            <div class="pillar__icon">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+                <rect x="3" y="6" width="22" height="16" rx="3" stroke="currentColor" stroke-width="1.5" />
+                <path d="M8 14h4M16 14h4M10 10v8M18 10v8" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="pillar__content">
+            <h3 class="pillar__title">Ad-Tech CMS</h3>
+            <p class="pillar__desc">Programmatic platforms, real-time bidding, audience analytics, and smart campaign
+              orchestration.</p>
+          </div>
+          <div class="pillar__shine" aria-hidden="true"></div>
+        </div>
+
+        <div class="pillar" id="pillar2">
+          <div class="pillar__icon-wrap">
+            <div class="pillar__icon">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+                <rect x="4" y="3" width="20" height="22" rx="2" stroke="currentColor" stroke-width="1.5" />
+                <path d="M9 10h10M9 14h7M9 18h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="21" cy="21" r="5" fill="#1c2a35" stroke="currentColor" stroke-width="1.5" />
+                <path d="M19.5 21l1 1 2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="pillar__content">
+            <h3 class="pillar__title">Media Solutions</h3>
+            <p class="pillar__desc">LED displays, digital signage, interactive kiosks, and outdoor advertising hardware
+              engineered for impact.</p>
+          </div>
+          <div class="pillar__shine" aria-hidden="true"></div>
+        </div>
+
+        <div class="pillar" id="pillar3">
+          <div class="pillar__icon-wrap">
+            <div class="pillar__icon">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+                <path
+                  d="M14 4v4M14 20v4M4 14h4M20 14h4M7.5 7.5l2.8 2.8M17.7 17.7l2.8 2.8M7.5 20.5l2.8-2.8M17.7 10.3l2.8-2.8"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="14" cy="14" r="4" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </div>
+          </div>
+          <div class="pillar__content">
+            <h3 class="pillar__title">Service Excellence</h3>
+            <p class="pillar__desc">End-to-end deployment, maintenance, content management, and 24/7 strategic support
+              services.</p>
+          </div>
+          <div class="pillar__shine" aria-hidden="true"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <p class="footer__copy">&copy; 2026 AdTech Prime Solution. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919987094979?text=Hello%20AdTech%20Prime%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
+      target="_blank" rel="noopener noreferrer" class="whatsapp-float" id="whatsappFloat"
+      aria-label="Chat on WhatsApp with AdTech Prime (+91 9987094979)">
+      <div class="whatsapp-float__badge" aria-hidden="true">1</div>
+      <svg class="whatsapp-float__icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"
+        aria-hidden="true">
+        <path
+          d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.572 4.187 1.572 5.941l-1.572 5.741 5.894-1.546c1.701.947 3.66 1.488 5.743 1.488 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12zm0 22c-1.849 0-3.585-.505-5.083-1.391l-.364-.216-3.774.99 1.008-3.676-.237-.378c-.974-1.554-1.55-3.376-1.55-5.329 0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+      </svg>
+      <span class="whatsapp-float__tooltip">Chat on WhatsApp</span>
+    </a>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -13,3 +13,6 @@ ehthumbs_vista.db
 *.swp
 *.swo
 *~
+
+# Dependencies (only used to build assets)
+node_modules/

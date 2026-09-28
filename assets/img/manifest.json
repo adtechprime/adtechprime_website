@@ -1,0 +1,54 @@
+{
+  "cms-preview": {
+    "widths": [
+      480,
+      960,
+      1440
+    ],
+    "ratio": 0.5628
+  },
+  "hero-inset": {
+    "widths": [
+      480,
+      960,
+      1440
+    ],
+    "ratio": 0.5628
+  },
+  "hero-main": {
+    "widths": [
+      480,
+      960,
+      1440
+    ],
+    "ratio": 0.75
+  },
+  "itanagar-meeting-room": {
+    "widths": [
+      480,
+      900
+    ],
+    "ratio": 1.7778
+  },
+  "jac-olivol-rooftop": {
+    "widths": [
+      480,
+      816
+    ],
+    "ratio": 0.5686
+  },
+  "ptc-news-studio": {
+    "widths": [
+      480,
+      960,
+      1280
+    ],
+    "ratio": 0.5625
+  },
+  "republic-led-logo": {
+    "widths": [
+      480
+    ],
+    "ratio": 1.7667
+  }
+}

@@ -199,6 +199,14 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .nav-list a { padding: 8px 0; border: 0; font-size: 15px; }
   .nav-cta { flex-direction: row; align-items: center; gap: 20px; }
 }
+/* Laptop widths: keep the menu on one line */
+.nav-list a, .nav-phone { white-space: nowrap; }
+@media (min-width: 1100px) and (max-width: 1365px) {
+  .brand img { width: 180px; }
+  .nav { margin-left: 24px; gap: 20px; }
+  .nav-list { gap: clamp(14px, 1.6vw, 22px); }
+  .nav-phone { display: none; }
+}
 
 /* ---------- Hero ---------- */
 .hero { position: relative; overflow: hidden; padding-top: clamp(40px, 6vw, 80px); }

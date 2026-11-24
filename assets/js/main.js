@@ -103,7 +103,7 @@
     function setBusy(busy) {
       submit.disabled = busy;
       submit.classList.toggle('is-loading', busy);
-      submit.querySelector('.btn-label').textContent = busy ? 'Sending…' : submitLabel;
+      submit.querySelector('.btn-label').textContent = busy ? 'Sending…' : (form.getAttribute('data-submit-label') || submitLabel);
     }
 
     form.addEventListener('submit', function (e) {
@@ -127,7 +127,7 @@
       var company = form.hasAttribute('data-subject-prefix') ? String(data.get('company') || '').trim() : '';
       var detail = data.get('requirement') || data.get('screens') || '';
       form.querySelector('[data-subject]').value =
-        subjectPrefix + ': ' + name + (company ? ' (' + company + ')' : city ? ' (' + city + ')' : '') +
+        (form.getAttribute('data-subject-prefix') || subjectPrefix) + ': ' + name + (company ? ' (' + company + ')' : city ? ' (' + city + ')' : '') +
         (detail ? ' — ' + detail : '');
       data = new FormData(form);
 

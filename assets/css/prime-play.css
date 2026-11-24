@@ -1,0 +1,141 @@
+/* Prime Play product page — extends styles.css (same fonts, palette and components).
+   Only the page-specific illustrations and grids live here. */
+
+:root { --pp-cyan: #04A9F4; }
+
+/* ---------- Hero ---------- */
+.pp-hero { padding-bottom: clamp(48px, 6vw, 80px); }
+.pp-lockup { display: inline-flex; align-items: center; gap: 14px; }
+.pp-lockup img { width: 54px; height: 64px; object-fit: contain; filter: drop-shadow(0 8px 18px rgba(4,169,244,.25)); }
+.pp-lockup-text { display: flex; flex-direction: column; line-height: 1.15; }
+.pp-lockup-text strong { font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.pp-lockup-text .mono { font-size: 11px; letter-spacing: 0.14em; color: var(--muted-dark); }
+
+.pp-devices svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 30px 40px rgba(4,9,24,.45)); }
+
+.pp-points {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
+  margin-top: clamp(48px, 6vw, 72px); padding-top: 28px; border-top: 1px solid var(--navy-700);
+  font-size: 15px; color: var(--line-strong);
+}
+.pp-points li { display: flex; align-items: center; gap: 10px; }
+.pp-points .ic { width: 20px; height: 20px; flex: none; color: var(--blue-bright); }
+@media (min-width: 720px) { .pp-points { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .pp-hero .hero-grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); } }
+
+/* ---------- Highlights: 3 columns on desktop ---------- */
+@media (min-width: 1100px) { .pp-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } .pp-cards .card { min-height: 240px; } }
+
+/* ---------- Split layouts ---------- */
+@media (min-width: 1024px) {
+  .pp-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
+}
+@media (max-width: 1023px) { .pp-split-flip > :first-child { order: 2; } }
+
+/* shared illustration bits */
+.pp-label { font-size: 11px; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 12px; }
+.bar { display: block; height: 8px; border-radius: 4px; background: var(--navy-900); }
+.bar.light { background: var(--line-strong); }
+.w20 { width: 20%; } .w30 { width: 30%; } .w40 { width: 40%; } .w50 { width: 50%; } .w60 { width: 60%; }
+
+/* ---------- Proof report ---------- */
+.pp-report {
+  padding: clamp(20px, 3vw, 32px); border-radius: var(--radius); background: #fff;
+  border: 1px solid var(--line); box-shadow: 0 24px 50px rgba(11,23,51,.08);
+}
+.pp-report-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.pp-report-logo { width: 40px; height: 40px; flex: none; border-radius: 10px; background: linear-gradient(135deg, var(--blue), var(--pp-cyan)); }
+.pp-report-title { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.pp-badges { display: flex; gap: 6px; }
+.pp-badge { padding: 4px 8px; border-radius: 6px; font-size: 11px; background: var(--ground); color: var(--blue-dark); border: 1px solid var(--line); }
+.pp-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 24px; }
+.photo { aspect-ratio: 4 / 3; border-radius: 10px; position: relative; overflow: hidden; }
+.photo::after { content: ""; position: absolute; inset: 22% 18%; border-radius: 4px; background: rgba(255,255,255,.85); }
+.photo.p1 { background: var(--navy-900); }
+.photo.p2 { background: var(--blue); }
+.photo.p3 { background: var(--navy-600); }
+.pp-playcheck { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); gap: 5px; }
+.pp-playcheck i { height: 28px; border-radius: 4px; background: var(--blue); }
+.pp-playcheck i.gap { background: var(--warn); }
+.pp-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 14px; font-size: 13px; color: var(--muted); }
+.pp-legend span { display: inline-flex; align-items: center; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.dot.ok { background: var(--blue); }
+.dot.gap { background: var(--warn); }
+
+/* ---------- Control grid (dark, like the main site's process section) ---------- */
+.pp-control-section { position: relative; overflow: hidden; }
+.pp-control-section::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(90,168,255,.16) 1.2px, transparent 1.8px); background-size: 16px 16px;
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 70%); mask-image: linear-gradient(to bottom, #000, transparent 70%);
+}
+.pp-control-section .container { position: relative; }
+.pp-control {
+  display: grid; gap: 1px; background: var(--navy-700); border: 1px solid var(--navy-700);
+  border-radius: var(--radius); overflow: hidden;
+}
+.pp-control li { background: var(--navy-900); padding: clamp(22px, 2.6vw, 32px); display: flex; flex-direction: column; gap: 10px; }
+.pp-control svg {
+  width: 28px; height: 28px; margin-bottom: 8px; color: var(--blue-bright);
+  fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+}
+.pp-control h3 { font-family: var(--font-display); font-size: 19px; font-weight: 600; }
+.pp-control p { font-size: 15px; color: var(--muted-dark); }
+.pp-control li.stop svg { color: #FF7A6B; }
+@media (min-width: 560px) { .pp-control { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .pp-control { grid-template-columns: repeat(3, minmax(0, 1fr)); } .pp-control li { min-height: 190px; } }
+
+/* ---------- Security illustration ---------- */
+.pp-roles { display: flex; flex-direction: column; gap: 14px; }
+.pp-role-card { padding: 22px; border-radius: var(--radius); background: #fff; border: 1px solid var(--line); }
+.pp-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.pp-chip { padding: 8px 14px; border-radius: 999px; font-size: 14px; font-weight: 600; background: var(--ground); border: 1px solid var(--line); }
+.pp-chip:first-child { background: var(--navy-900); border-color: var(--navy-900); color: #fff; }
+.pp-flow { display: flex; align-items: center; justify-content: space-between; gap: 8px; background: var(--ground); }
+.pp-flow .ic { width: 18px; height: 18px; flex: none; color: var(--muted-dark-2); }
+.pp-step { flex: 1; text-align: center; padding: 10px 6px; border-radius: 10px; background: #fff; border: 1px solid var(--line); font-size: 14px; font-weight: 600; }
+.pp-step.on { background: var(--blue); border-color: var(--blue); color: #fff; }
+.pp-log { display: flex; flex-direction: column; gap: 12px; }
+.pp-log .pp-label { margin-bottom: 0; }
+.pp-log-row { display: flex; align-items: center; gap: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+.pp-log-row::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); flex: none; }
+.pp-log-row .bar.light { margin-left: auto; }
+
+/* ---------- Platforms ---------- */
+.pp-platforms { display: grid; gap: 20px; }
+.pp-platform { padding: clamp(24px, 3vw, 36px); border-radius: var(--radius); background: #fff; border: 1px solid var(--line); }
+.pp-platform h3 { font-family: var(--font-display); font-size: 21px; font-weight: 600; margin-bottom: 20px; }
+.pp-platform ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.pp-platform li {
+  display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 20px 8px;
+  border-radius: 12px; background: var(--ground); font-weight: 600; font-size: 15px; text-align: center;
+}
+.pp-platform li svg {
+  width: 30px; height: 30px; color: var(--blue);
+  fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+}
+.pp-soon { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 20px; font-size: 15px; color: var(--muted); }
+.pp-soon-tag { padding: 4px 10px; border-radius: 999px; font-size: 11px; letter-spacing: 0.1em; background: var(--navy-900); color: var(--blue-bright); }
+@media (min-width: 960px) { .pp-platforms { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; } }
+
+/* ---------- White label illustration ---------- */
+.pp-wl-browser { border-radius: var(--radius); overflow: hidden; background: #fff; border: 1px solid var(--line); box-shadow: 0 24px 50px rgba(11,23,51,.08); }
+.pp-wl-bar { display: flex; align-items: center; gap: 6px; padding: 12px 16px; background: var(--ground); border-bottom: 1px solid var(--line); }
+.pp-wl-bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
+.pp-wl-url { margin-left: 10px; padding: 5px 12px; border-radius: 6px; background: #fff; border: 1px solid var(--line); font-size: 12px; color: var(--ink-2); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pp-wl-body {
+  position: relative; padding: clamp(32px, 5vw, 56px) 20px; display: grid; place-items: center;
+  background-color: var(--navy-900);
+  background-image: radial-gradient(rgba(90,168,255,.18) 1.2px, transparent 1.8px); background-size: 16px 16px;
+}
+.pp-wl-signin { width: min(260px, 100%); padding: 24px; border-radius: 14px; background: #fff; display: flex; flex-direction: column; gap: 12px; }
+.pp-wl-logo {
+  align-self: center; padding: 8px 16px; margin-bottom: 6px; border-radius: 8px; border: 1.5px dashed var(--line-strong);
+  font-family: var(--font-display); font-weight: 600; font-size: 14px; color: var(--muted);
+}
+.pp-wl-field { height: 34px; border-radius: 8px; background: var(--ground); border: 1px solid var(--line); }
+.pp-wl-btn { margin-top: 4px; padding: 10px; border-radius: 8px; background: var(--blue); color: #fff; font-weight: 600; font-size: 14px; text-align: center; }
+.pp-wl-swatches { position: absolute; right: 16px; bottom: 16px; display: flex; gap: 6px; }
+.pp-wl-swatches i { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(255,255,255,.7); }
+.pp-wl-swatches .s1 { background: #E4572E; } .pp-wl-swatches .s2 { background: #17BEBB; } .pp-wl-swatches .s3 { background: #FFC914; }

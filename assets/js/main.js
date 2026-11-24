@@ -88,6 +88,8 @@
     var status = form.querySelector('[data-form-status]');
     var submit = form.querySelector('[data-submit]');
     var defaultStatus = status.textContent;
+    var submitLabel = form.getAttribute('data-submit-label') || 'Request site survey';
+    var subjectPrefix = form.getAttribute('data-subject-prefix') || 'Site survey request';
     var messages = {
       name: 'Please enter your name.',
       phone: 'Please enter a valid phone number.',
@@ -101,7 +103,7 @@
     function setBusy(busy) {
       submit.disabled = busy;
       submit.classList.toggle('is-loading', busy);
-      submit.querySelector('.btn-label').textContent = busy ? 'Sending…' : 'Request site survey';
+      submit.querySelector('.btn-label').textContent = busy ? 'Sending…' : submitLabel;
     }
 
     form.addEventListener('submit', function (e) {
@@ -122,8 +124,11 @@
       var data = new FormData(form);
       var name = String(data.get('name')).trim();
       var city = String(data.get('city') || '').trim();
+      var company = form.hasAttribute('data-subject-prefix') ? String(data.get('company') || '').trim() : '';
+      var detail = data.get('requirement') || data.get('screens') || '';
       form.querySelector('[data-subject]').value =
-        'Site survey request: ' + name + (city ? ' (' + city + ')' : '') + ' — ' + data.get('requirement');
+        subjectPrefix + ': ' + name + (company ? ' (' + company + ')' : city ? ' (' + city + ')' : '') +
+        (detail ? ' — ' + detail : '');
       data = new FormData(form);
 
       setBusy(true);

@@ -145,7 +145,8 @@
           form.reset();
           setStatus(defaultStatus);
         })
-        .catch(function () {
+        .catch(function (err) {
+          if (window.console) console.warn('Form not sent:', err && err.message);
           setStatus('We couldn\'t send your request. Please try again, or call +91 77388 24979.', 'error');
         })
         .then(function () { setBusy(false); });

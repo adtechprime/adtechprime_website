@@ -65,8 +65,9 @@
   function applyToForm() {
     var form = $('[data-contact-form]');
     if (!form || !state.code) return;
-    var field = $('[name="explorer_pass"]', form);
-    if (field) field.value = 'Completed · ' + state.code + (state.setup ? ' · ' + state.setup : '');
+    // Field name must not contain 'pass': Web3Forms rejects it as a security risk.
+    var field = $('[name="priority_demo"]', form);
+    if (field) field.value = 'Yes · code ' + state.code + (state.setup ? ' · ' + state.setup : '');
     form.setAttribute('data-subject-prefix', 'Prime Play™ PRIORITY demo request [' + state.code + ']');
     form.setAttribute('data-submit-label', 'Claim my priority demo');
     var label = $('[data-submit] .btn-label', form);

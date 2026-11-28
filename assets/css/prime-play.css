@@ -343,3 +343,25 @@ html { scroll-padding-top: calc(var(--header-h) + 64px); }
   .pp-pass-row { min-height: 44px; padding-block: 5px; }
   .pp-pass-badge { padding: 3px 9px; font-size: 12px; }
 }
+
+/* ---------- Header: AdTech Prime logo + Prime Play mark ----------
+   The company logo still goes home; the product mark goes to the top of this page.
+   Phones and tablets show the product icon only, to keep the header on one line. */
+.brand-combo { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.brand-divider { width: 1px; height: 32px; background: var(--navy-600); flex: none; }
+.brand-product { display: inline-flex; align-items: center; gap: 8px; color: #fff; flex: none; }
+.brand-product:hover { color: #fff; }
+.brand-product img { width: auto; height: 30px; }
+.brand-product-name { display: none; font-family: var(--font-display); font-size: 17px; font-weight: 500; letter-spacing: -0.01em; white-space: nowrap; }
+@media (max-width: 379px) { .brand-combo .brand img { width: 150px; } .brand-combo { gap: 10px; } }
+@media (min-width: 560px) { .brand-product-name { display: inline; } }
+@media (min-width: 1100px) and (max-width: 1365px) {
+  .brand-combo .brand img { width: 160px; }
+  .brand-combo { gap: 12px; }
+  .brand-product img { height: 26px; }
+  .brand-product-name { font-size: 15px; }
+}
+.site-header .nav-cta .btn { white-space: nowrap; }
+.brand-divider { background: var(--navy-500, #33507F); }
+.brand-combo, .brand-combo .brand { flex: none; }
+@media (min-width: 1100px) and (max-width: 1279px) { .brand-product-name { display: none; } }

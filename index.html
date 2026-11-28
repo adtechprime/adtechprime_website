@@ -28,8 +28,8 @@
   <link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/hero-main-480.webp 480w, assets/img/hero-main-960.webp 960w, assets/img/hero-main-1440.webp 1440w" imagesizes="(min-width: 960px) 600px, 100vw" fetchpriority="high">
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261128b">
-  <script src="assets/js/main.js?v=20261128b" defer></script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261128c">
+  <script src="assets/js/main.js?v=20261128c" defer></script>
 
   <script type="application/ld+json">
   {
@@ -100,36 +100,22 @@
 
   <main id="main">
     <!-- ============ HERO ============ -->
-    <section class="hero dark" id="top">
+    <section class="hero hero-photo dark" id="top">
       <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="pill mono"><span class="pill-dot"></span>LED · LCD · DOOH, end to end</p>
-            <h1 class="display">Turning every space into a <span class="hl">digital asset.</span></h1>
-            <p class="lead">End-to-end LED, LCD and DOOH solutions — OEM-backed hardware, custom fabrication, installation and CMS. From ideation to go live, with one partner.</p>
-            <div class="btn-row">
-              <a class="btn btn-primary btn-lg" href="#contact">Plan your screen <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-              <a class="btn btn-ghost btn-lg" href="#work">See our work</a>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <div class="hero-screen">
-              <picture>
-                <source type="image/webp" srcset="assets/img/hero-main-480.webp 480w, assets/img/hero-main-960.webp 960w, assets/img/hero-main-1440.webp 1440w" sizes="(min-width: 960px) 600px, 100vw">
-                <img src="assets/img/hero-main-960.jpg" srcset="assets/img/hero-main-480.jpg 480w, assets/img/hero-main-960.jpg 960w, assets/img/hero-main-1440.jpg 1440w" sizes="(min-width: 960px) 600px, 100vw" width="1440" height="1080" alt="High-brightness outdoor LED billboard in a city at dusk" fetchpriority="high" decoding="async">
-              </picture>
-            </div>
-            <p class="hero-tag"><span class="dot"></span>Outdoor LED · DOOH</p>
-            <figure class="hero-card">
-              <picture>
-                <source type="image/webp" srcset="assets/img/hero-inset-480.webp 480w, assets/img/hero-inset-960.webp 960w" sizes="300px">
-                <img src="assets/img/hero-inset-480.jpg" width="480" height="270" alt="Fine-pitch indoor LED video wall in a mall atrium" loading="lazy" decoding="async">
-              </picture>
-              <figcaption><strong>Indoor LED</strong> · Video Wall<br><span>Retail &amp; commercial spaces</span></figcaption>
-            </figure>
+        <div class="hero-copy">
+          <p class="pill mono"><span class="pill-dot"></span>LED · LCD · DOOH, end to end</p>
+          <h1 class="display">Turning every space into a <span class="hl">digital asset.</span></h1>
+          <p class="lead">End-to-end LED, LCD and DOOH solutions — OEM-backed hardware, custom fabrication, installation and CMS. From ideation to go live, with one partner.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary btn-lg" href="#contact">Plan your screen <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost btn-lg" href="#work">See our work</a>
           </div>
         </div>
+
+        <picture class="hero-bg">
+          <source type="image/webp" srcset="assets/img/hero-main-480.webp 480w, assets/img/hero-main-960.webp 960w, assets/img/hero-main-1440.webp 1440w" sizes="100vw">
+          <img src="assets/img/hero-main-1440.jpg" srcset="assets/img/hero-main-480.jpg 480w, assets/img/hero-main-960.jpg 960w, assets/img/hero-main-1440.jpg 1440w" sizes="100vw" width="1440" height="1080" alt="High-brightness outdoor LED billboard over a city expressway at dusk" fetchpriority="high" decoding="async">
+        </picture>
 
         <dl class="stats">
           <div class="stat"><dt>Years of experience</dt><dd>15<span>+</span></dd></div>

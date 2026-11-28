@@ -253,6 +253,38 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .hero-card { left: -24px; bottom: 40px; }
 }
 
+/* ---------- Home hero: one full-width photo ----------
+   Phones: copy, then the photo edge to edge, then stats.
+   960px and up: the photo fills the section, mirrored so the billboard sits on the right
+   and the headline sits on the darker sky and towers on the left. */
+.hero-photo::before { display: none; }
+.hero-photo .hero-copy { position: relative; z-index: 1; max-width: 620px; }
+.hero-bg { display: block; position: relative; margin: 40px calc(50% - 50vw) 0; }
+.hero-bg img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.hero-bg::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to bottom, var(--navy-900) 0, rgba(11,23,51,0) 18%, rgba(11,23,51,0) 70%, var(--navy-900) 100%);
+}
+.hero-photo .stats, .hero-photo .stats-note { position: relative; z-index: 1; }
+.hero-photo .stats { margin-top: 8px; }
+
+@media (min-width: 960px) {
+  .hero-photo {
+    display: flex; flex-direction: column;
+    min-height: calc(100svh - var(--header-h)); padding-top: 0; padding-bottom: 32px;
+  }
+  .hero-photo .container { position: static; flex: 1; display: flex; flex-direction: column; }
+  .hero-photo .hero-copy { margin-block: auto; padding-block: 64px 48px; }
+  .hero-bg { position: absolute; inset: 0; margin: 0; }
+  .hero-bg img { height: 100%; aspect-ratio: auto; object-position: 50% 30%; transform: scaleX(-1); }
+  .hero-bg::after {
+    background:
+      linear-gradient(to top, var(--navy-900) 0, rgba(11,23,51,.88) 20%, rgba(11,23,51,0) 46%),
+      linear-gradient(to right, rgba(11,23,51,.94) 0, rgba(11,23,51,.84) 34%, rgba(11,23,51,.2) 62%, rgba(11,23,51,0) 80%);
+  }
+  .hero-photo .stats { margin-top: 0; }
+}
+
 .stats {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px;
   margin-top: clamp(64px, 8vw, 96px); padding-top: 36px; border-top: 1px solid var(--navy-700);

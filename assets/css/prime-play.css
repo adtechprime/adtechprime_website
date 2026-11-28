@@ -365,3 +365,5 @@ html { scroll-padding-top: calc(var(--header-h) + 64px); }
 .brand-divider { background: var(--navy-500, #33507F); }
 .brand-combo, .brand-combo .brand { flex: none; }
 @media (min-width: 1100px) and (max-width: 1279px) { .brand-product-name { display: none; } }
+/* "Play" takes the blue of the play triangle in the AdTech Prime logo; "Prime" and ™ stay white */
+.brand-product-play { color: #1769D2; }

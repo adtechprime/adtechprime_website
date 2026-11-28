@@ -367,3 +367,13 @@ html { scroll-padding-top: calc(var(--header-h) + 64px); }
 @media (min-width: 1100px) and (max-width: 1279px) { .brand-product-name { display: none; } }
 /* "Play" uses the bright site blue so it reads clearly on the navy header; "Prime" and ™ stay white */
 .brand-product-play { color: var(--blue-bright); }
+
+/* The two-logo header needs more room than the home page header. Between 1366 and
+   1499px (common laptops) the phone number came back and pushed "Book a demo" past
+   the right edge, so the page scrolled sideways. Keep the compact header up to 1499px. */
+@media (min-width: 1366px) and (max-width: 1499px) {
+  .brand-combo .brand img { width: 180px; }
+  .nav { margin-left: 24px; gap: 20px; }
+  .nav-list { gap: clamp(14px, 1.6vw, 22px); }
+  .nav-phone { display: none; }
+}

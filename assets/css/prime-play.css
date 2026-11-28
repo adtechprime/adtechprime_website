@@ -12,6 +12,10 @@
 .pp-lockup-text .mono { font-size: 11px; letter-spacing: 0.02em; color: var(--muted-dark); }
 
 .pp-devices svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 20px 30px rgba(4,9,24,.35)); }
+.pp-dev-svg text { font-family: var(--font-body); font-weight: 400; }
+.pp-dev-svg .t-b { font-weight: 500; }
+.pp-dev-svg .t-num { font-family: var(--font-display); font-variant-numeric: tabular-nums; }
+.pp-dev-svg .t-mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 
 .pp-points {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;

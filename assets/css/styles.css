@@ -637,3 +637,18 @@ button, input, select, textarea { font: inherit; color: inherit; }
   }
   .nav-list a[aria-current="page"] { color: #fff; }
 }
+
+/* ---------- Footer links: the same growing underline as the nav ----------
+   Drawn as a background so it also follows the address link across its lines.
+   Grows from the left on hover, shrinks to the right on leave. */
+.footer-grid a {
+  align-self: flex-start; padding-bottom: 2px;
+  background: linear-gradient(var(--blue-bright), var(--blue-bright)) no-repeat right bottom / 0 2px;
+  transition: background-size .25s cubic-bezier(.2,.8,.2,1), color .2s;
+}
+.footer-grid a:focus-visible { background-size: 100% 2px; background-position: left bottom; color: #fff; }
+@media (hover: hover) {
+  .footer-grid a:hover { background-size: 100% 2px; background-position: left bottom; }
+}
+/* the address link wraps: underline every line, not one long strip */
+.f-address a { -webkit-box-decoration-break: clone; box-decoration-break: clone; }

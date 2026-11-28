@@ -652,3 +652,16 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 /* the address link wraps: underline every line, not one long strip */
 .f-address a { -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* ---------- Visit us links: the same growing underline ----------
+   This section sits on a light background, so the line uses the deeper blue
+   (the bright blue used on navy would be too faint here). */
+.visit-meta a {
+  padding-bottom: 2px;
+  background: linear-gradient(currentColor, currentColor) no-repeat right bottom / 0 2px;
+  transition: background-size .25s cubic-bezier(.2,.8,.2,1), color .2s;
+}
+.visit-meta a:focus-visible { background-size: 100% 2px; background-position: left bottom; }
+@media (hover: hover) {
+  .visit-meta a:hover { background-size: 100% 2px; background-position: left bottom; }
+}
